@@ -1,12 +1,7 @@
 import { lazy, FC, useState, Suspense } from "react";
 import Tab from "./components/Tab";
+import { Tab1, Tab2, Tab3, Tab4 } from "./components/tabs";
 import "./styles.css";
-
-// import { Tab1, Tab2, Tab3 } from "./components/tabs";
-const Tab1 = lazy(() => import("./components/tabs/Tab1"));
-const Tab2 = lazy(() => import("./components/tabs/Tab2"));
-const Tab3 = lazy(() => import("./components/tabs/Tab3"));
-const Tab4 = lazy(() => import("./components/tabs/Tab4"));
 
 const tabs: {
   isDisabled?: boolean;
@@ -32,13 +27,7 @@ const App = () => {
 
   const renderTabPanel = () => {
     const Component = tabs[currentTabIndex].component;
-    return (
-      <Suspense
-        fallback={<div className="tab-panel-placeholder">Loading...</div>}
-      >
-        <Component />
-      </Suspense>
-    );
+    return <Component />;
   };
 
   return (
