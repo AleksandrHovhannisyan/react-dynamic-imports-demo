@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial;
+}
+
+.app {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  gap: 1.6rem;
+}
+
+.tabs {
+  border: solid 1px;
+  display: flex;
+}
+
+.tab-panel-placeholder {
+  border: solid 1px;
+  font-size: 2.4rem;
+  padding: 3.2rem;
+}
